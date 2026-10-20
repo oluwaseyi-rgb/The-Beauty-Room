@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Beauty Room | Braids in Ojo, Lagos</title>
+<meta name="description" content="Where confidence, identity and joy is restored. Book your braiding appointment at The Beauty Room in Ojo, Lagos State, Nigeria.">
+<meta name="theme-color" content="#F8EAD0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F8EAD0;
+    --ivory:#FFF9EE;
+    --sand:#EAD7B2;
+    --gold:#C79E55;
+    --brown:#714F1D;
+    --deep:#5A3D12;
+    --espresso:#2B1D0C;
+    --bronze:#7A551C;
+    --muted:#5E4A2E;
+    --script:"Allura","Snell Roundhand","Segoe Script",cursive;
+    --body:"Jost","Helvetica Neue",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{margin:0;font-family:var(--body);font-size:1.0625rem;color:var(--espresso);background:var(--ivory);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img,video{max-width:100%;display:block}
+  [hidden]{display:none !important}
+  a{color:inherit}
+  .wrap{width:min(1160px,100% - 2.5rem);margin-inline:auto}
+  :focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+  .skip{position:absolute;left:-999px;top:0;background:var(--deep);color:var(--cream);padding:.7rem 1rem;z-index:100;border-radius:0 0 10px 0;font-weight:500}
+  .skip:focus{left:0}
+
+  /* ---------- header ---------- */
+  .site-header{position:sticky;top:0;z-index:20;background:rgba(248,234,208,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(113,79,29,.22)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 0}
+  .logo{font-family:var(--script);font-size:2.2rem;line-height:1;color:var(--brown);text-decoration:none;white-space:nowrap}
+  .nav{display:flex;align-items:center;gap:1.6rem}
+  .nav a.link{font-weight:500;text-decoration:none;padding:.3rem 0;border-bottom:1px solid transparent}
+  .nav a.link:hover{border-bottom-color:var(--brown)}
+  .nav .btn{display:none}
+  @media(max-width:480px){.logo{font-size:1.65rem}.nav{gap:.9rem}.nav a.link{font-size:.95rem}}
+  @media(min-width:760px){.nav .btn{display:inline-flex;padding:.7rem 1.3rem;font-size:.95rem}}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.7rem;border:1.5px solid var(--deep);border-radius:999px;font:500 1.02rem/1 var(--body);letter-spacing:.01em;text-decoration:none;cursor:pointer;transition:background-color .2s ease,color .2s ease}
+  .btn-primary{background:var(--deep);color:var(--cream)}
+  .btn-primary:hover{background:var(--espresso);border-color:var(--espresso)}
+  .btn-ghost{background:transparent;color:var(--deep)}
+  .btn-ghost:hover{background:var(--deep);color:var(--cream)}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--cream);overflow:hidden}
+  .hero-inner{display:grid;gap:2.5rem;align-items:center;padding:clamp(2rem,5vw,3.5rem) 0 clamp(3.5rem,6vw,5.5rem)}
+  @media(min-width:900px){.hero-inner{grid-template-columns:1.2fr .8fr;gap:3rem}}
+
+  .wordmark{margin:0 0 .6rem}
+  .wordmark img{width:min(500px,100%);height:auto}
+  .tagline{margin:0 0 1.6rem;font-family:var(--script);font-size:clamp(1.7rem,3.4vw,2.3rem);line-height:1.15;color:var(--bronze)}
+  .lede{max-width:30rem;margin:0 0 2rem;font-size:1.15rem;color:var(--muted)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:2rem}
+  .facts{display:flex;flex-wrap:wrap;gap:.6rem 1.8rem;margin:0;padding:0;list-style:none;font-weight:500;color:var(--deep)}
+  .facts li{display:flex;align-items:center;gap:.5rem}
+  .facts svg{width:19px;height:19px;flex:none}
+
+  .hero-art{--pw:clamp(230px,62vw,296px);position:relative;display:grid;place-items:center;min-height:calc(var(--pw)*1.95)}
+  .orb{position:absolute;border-radius:50%;animation:bob var(--d,8s) ease-in-out var(--dl,0s) infinite;z-index:1}
+  .o-back{width:calc(var(--pw)*1.45);aspect-ratio:1;background:rgba(255,249,238,.6);animation:none}
+  .o1{width:calc(var(--pw)*.4);aspect-ratio:1;background:var(--gold);left:calc(50% - var(--pw)*.78);top:6%;--d:9s}
+  .o2{width:calc(var(--pw)*.28);aspect-ratio:1;background:var(--brown);right:calc(50% - var(--pw)*.7);bottom:9%;--d:7.5s;--dl:-2s;z-index:3}
+  .o3{width:calc(var(--pw)*.19);aspect-ratio:1;background:var(--sand);right:calc(50% - var(--pw)*.62);top:20%;--d:8.5s;--dl:-1s}
+  .o4{width:calc(var(--pw)*.26);aspect-ratio:1;border:2px solid var(--gold);left:calc(50% - var(--pw)*.68);bottom:5%;--d:10s;--dl:-3s}
+  .o5{width:calc(var(--pw)*.1);aspect-ratio:1;background:var(--brown);right:calc(50% - var(--pw)*.34);top:1%;--d:7s;--dl:-1.5s}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+  .phone{position:relative;z-index:2;width:var(--pw);aspect-ratio:9/17.6;border:9px solid var(--espresso);border-radius:42px;overflow:hidden;background:#000;box-shadow:0 28px 50px -12px rgba(43,29,12,.38);user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+  .phone::before{content:"";position:absolute;z-index:3;top:0;left:50%;width:34%;height:21px;transform:translateX(-50%);background:var(--espresso);border-radius:0 0 15px 15px}
+  .phone::after{content:"";position:absolute;inset:0;z-index:2}
+  .phone video{width:100%;height:100%;object-fit:cover;pointer-events:none}
+
+  /* ---------- gallery ---------- */
+  .styles{background:var(--ivory);padding:clamp(3.5rem,8vw,6rem) 0}
+  .section-head{max-width:40rem;margin-bottom:2.8rem}
+  .section-head h2,.book h2{margin:0 0 .7rem;font:500 clamp(2rem,4.6vw,3.1rem)/1.12 var(--body);letter-spacing:-.01em}
+  .section-head h2{color:var(--deep)}
+  .section-head p{margin:0;font-size:1.12rem;color:var(--muted)}
+  .gallery{columns:3 270px;column-gap:1.6rem}
+  .gallery figure{break-inside:avoid;margin:0 0 1.8rem}
+  .gallery img{width:100%;height:auto;border-radius:14px;box-shadow:0 14px 28px -14px rgba(43,29,12,.4);background:var(--sand)}
+  .gallery figcaption{margin-top:.75rem;font-size:.98rem;font-weight:500;color:var(--muted)}
+  .styles-cta{margin-top:1rem}
+
+  /* ---------- booking ---------- */
+  .book{background:var(--espresso);color:var(--cream);padding:clamp(3.5rem,8vw,6rem) 0}
+  .book-grid{display:grid;gap:2.5rem;align-items:start}
+  @media(min-width:900px){.book-grid{grid-template-columns:.9fr 1.1fr;gap:4.5rem}}
+  .book h2{color:var(--cream)}
+  .book .intro{margin:0 0 2.2rem;font-size:1.12rem;max-width:28rem;color:rgba(248,234,208,.88)}
+  .details{display:grid;gap:1.5rem;margin:0}
+  .details dt{font-weight:600;font-size:1.02rem;margin-bottom:.25rem;color:#E3C17D}
+  .details dd{margin:0}
+  .hours{display:grid;grid-template-columns:auto auto;justify-content:start;gap:.25rem 1.6rem}
+  .hours span{white-space:nowrap}
+  .book a:focus-visible,.book button:focus-visible{outline-color:#E3C17D}
+
+  .card{background:var(--ivory);color:var(--espresso);border-radius:20px;padding:clamp(1.4rem,3vw,2.1rem);box-shadow:0 30px 60px -24px rgba(0,0,0,.55)}
+  .card h3{margin:0 0 1.2rem;font:500 1.5rem/1.2 var(--body);color:var(--deep)}
+  form{display:grid;gap:1rem}
+  .row{display:grid;gap:1rem}
+  @media(min-width:620px){.row.two{grid-template-columns:1fr 1fr}}
+  label{display:block;font-weight:500;margin-bottom:.35rem;color:var(--deep)}
+  label .opt{font-weight:400;color:var(--muted);font-size:.9rem;margin-left:.3rem}
+  input{width:100%;padding:.85rem 1rem;border:1.5px solid #CDB68F;border-radius:10px;font:400 1rem var(--body);color:var(--espresso);background:#fff}
+  input::placeholder{color:#76674F}
+  input:focus{border-color:var(--brown)}
+  input:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+  .card .btn{width:100%;margin-top:.4rem;padding:1.1rem 1.5rem}
+  .note{margin:.2rem 0 0;font-size:.92rem;color:var(--muted)}
+  .ready p{margin:0 0 1.2rem;font-size:1.05rem}
+  .ready .btn-ghost{margin-top:.8rem}
+
+  /* ---------- footer ---------- */
+  .site-footer{background:#1F1409;color:var(--cream);padding:2.8rem 0 1.4rem}
+  .foot{display:flex;flex-wrap:wrap;gap:1.5rem 3rem;justify-content:space-between;align-items:flex-start}
+  .foot .brand{font:400 2.2rem/1 var(--script);color:var(--cream)}
+  .foot p{margin:0}
+  .foot a{color:#E3C17D;font-weight:500}
+  .sig{margin:2rem 0 0;text-align:center;font-size:.7rem;letter-spacing:.02em;color:rgba(248,234,208,.62)}
+
+  /* ---------- whatsapp bubble ---------- */
+  .wa{position:fixed;right:18px;bottom:18px;z-index:30;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.28);transition:transform .2s ease}
+  .wa:hover{transform:scale(1.06)}
+  .wa svg{width:31px;height:31px}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .orb{animation:none}
+    .btn,.wa{transition:none}
+  }
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#services">Skip to braid styles</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="The Beauty Room, back to top">The Beauty Room</a>
+    <nav class="nav" aria-label="Main">
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#book">Book</a>
+      <a class="btn btn-primary" href="#book">Request an appointment</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <h1 class="wordmark" id="hero-title"><img src="assets/logo.png" width="968" height="580" alt="The Beauty Room"></h1>
+        <p class="tagline">...Where confidence, identity and Joy is restored</p>
+        <p class="lede">Neat parts, clean edges and braids that last. Choose your style and we will confirm your slot on WhatsApp.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#book">Request an appointment</a>
+          <a class="btn btn-ghost" href="#services">See services</a>
+        </div>
+        <ul class="facts">
+          <li>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            Ojo, Lagos State
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Open Monday to Saturday
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-art">
+        <span class="orb o-back" aria-hidden="true"></span>
+        <span class="orb o1" aria-hidden="true"></span>
+        <span class="orb o3" aria-hidden="true"></span>
+        <span class="orb o4" aria-hidden="true"></span>
+        <span class="orb o5" aria-hidden="true"></span>
+        <div class="phone" aria-hidden="true" oncontextmenu="return false">
+          <video id="heroVideo" src="assets/hero.mp4" poster="assets/hero-poster.jpg" autoplay muted loop playsinline preload="auto" tabindex="-1" disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback noplaybackrate"></video>
+        </div>
+        <span class="orb o2" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="styles" id="services" aria-labelledby="styles-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="styles-title">Braid styles we do</h2>
+        <p>Love one? Screenshot it and send it with your request.</p>
+      </div>
+      <div class="gallery">
+        <figure><img src="assets/photos/01.jpg" width="736" height="1308" alt="Side view of zigzag cornrows flowing into long curly boho braids" loading="lazy"><figcaption>Zigzag cornrows with boho curls</figcaption></figure>
+        <figure><img src="assets/photos/02.jpg" width="736" height="921" alt="Shoulder-length boho knotless braids with curly ends" loading="lazy"><figcaption>Boho knotless bob</figcaption></figure>
+        <figure><img src="assets/photos/03.jpg" width="590" height="918" alt="Swirl cornrows finished with wooden beads on the ends" loading="lazy"><figcaption>Swirl cornrows with wooden beads</figcaption></figure>
+        <figure><img src="assets/photos/04.jpg" width="736" height="1307" alt="Curved stitch braids at the front with long curly braids behind" loading="lazy"><figcaption>Curved stitch braids with curly ends</figcaption></figure>
+        <figure><img src="assets/photos/05.jpg" width="736" height="1307" alt="Back view of star-pattern braids with gold cuffs and curly tips" loading="lazy"><figcaption>Star-pattern braids with gold cuffs</figcaption></figure>
+        <figure><img src="assets/photos/06.jpg" width="720" height="900" alt="Feed-in braids in honey brown with loose curly strands" loading="lazy"><figcaption>Feed-in braids in honey brown</figcaption></figure>
+        <figure><img src="assets/photos/07.jpg" width="736" height="981" alt="Stitch braids ending in two large blonde and brown plaits" loading="lazy"><figcaption>Stitch braids with two big plaits</figcaption></figure>
+        <figure><img src="assets/photos/08.jpg" width="736" height="1041" alt="Stitch cornrows braided straight back" loading="lazy"><figcaption>Stitch cornrows, straight back</figcaption></figure>
+        <figure><img src="assets/photos/09.jpg" width="672" height="896" alt="Classic straight-back cornrows in black" loading="lazy"><figcaption>Classic straight-back cornrows</figcaption></figure>
+        <figure><img src="assets/photos/10.jpg" width="736" height="1103" alt="Long ginger boho knotless braids with a pink flower clip" loading="lazy"><figcaption>Ginger boho knotless</figcaption></figure>
+      </div>
+      <div class="styles-cta">
+        <a class="btn btn-primary" href="#book">Request an appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book" aria-labelledby="book-title">
+    <div class="wrap book-grid">
+      <div>
+        <h2 id="book-title">Request an appointment</h2>
+        <p class="intro">Tell us who you are and the style you want. We will continue on WhatsApp to confirm your date and time.</p>
+        <dl class="details">
+          <div>
+            <dt>Find us</dt>
+            <dd>Ojo, Lagos State, Nigeria</dd>
+          </div>
+          <div>
+            <dt>Opening hours</dt>
+            <dd>
+              <div class="hours">
+                <span>Monday to Saturday</span><span>8:00am to 7:00pm</span>
+                <span>Sunday</span><span>Closed</span>
+              </div>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="card">
+        <h3>Your details</h3>
+        <form id="bookForm" novalidate>
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Adaeze Okafor" required>
+          </div>
+          <div>
+            <label for="whatsapp">WhatsApp number</label>
+            <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. 0801 234 5678" required>
+          </div>
+          <div class="row two">
+            <div>
+              <label for="instagram">Instagram <span class="opt">optional</span></label>
+              <input id="instagram" name="instagram" type="text" autocomplete="off" autocapitalize="none" placeholder="@yourhandle">
+            </div>
+            <div>
+              <label for="tiktok">TikTok <span class="opt">optional</span></label>
+              <input id="tiktok" name="tiktok" type="text" autocomplete="off" autocapitalize="none" placeholder="@yourhandle">
+            </div>
+          </div>
+          <div>
+            <label for="email">Email <span class="opt">optional</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="style">Style you want <span class="opt">optional</span></label>
+            <input id="style" name="style" type="text" placeholder="e.g. Knotless boho, medium, waist length">
+          </div>
+          <div>
+            <label for="date">Preferred date <span class="opt">optional</span></label>
+            <input id="date" name="date" type="date">
+          </div>
+          <button class="btn btn-primary" type="submit">Send request on WhatsApp</button>
+          <p class="note">This opens WhatsApp with your details filled in. Nothing is sent until you press send there.</p>
+        </form>
+
+        <div class="ready" id="ready" tabindex="-1" hidden>
+          <h3>Your request is ready</h3>
+          <p>Tap the button to open WhatsApp, then press send to share your request with The Beauty Room.</p>
+          <a class="btn btn-primary" id="waSend" href="#" target="_blank" rel="noopener">Open WhatsApp</a>
+          <button class="btn btn-ghost" id="editReq" type="button">Edit my details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p class="brand">The Beauty Room</p>
+        <p>Ojo, Lagos State, Nigeria</p>
+      </div>
+      <div>
+        <p>Monday to Saturday, 8:00am to 7:00pm</p>
+        <p>Sunday: closed</p>
+      </div>
+      <div>
+        <p><a href="#book">Request an appointment</a></p>
+        <p><a data-wa href="https://wa.me/2347052440872">Chat on WhatsApp</a></p>
+      </div>
+    </div>
+    <p class="sig">Built by Oluwaseyi</p>
+  </div>
+</footer>
+
+<a class="wa" data-wa href="https://wa.me/2347052440872" target="_blank" rel="noopener" aria-label="Chat with The Beauty Room on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  /* ===== Set the salon's WhatsApp number here (country code first, digits only) ===== */
+  const SALON_WHATSAPP = "2347052440872";
+
+  const waLink = (text) => "https://wa.me/" + SALON_WHATSAPP + "?text=" + encodeURIComponent(text);
+
+  /* Floating bubble and footer link */
+  document.querySelectorAll("[data-wa]").forEach((a) => {
+    a.href = waLink("Hello The Beauty Room, I would like to ask about a braiding appointment.");
+  });
+
+  /* Hero video: always muted, looping, no controls. Retry if the browser blocks autoplay. */
+  const video = document.getElementById("heroVideo");
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    const start = () => { const p = video.play(); if (p && p.catch) p.catch(() => {}); };
+    const p = video.play();
+    if (p && p.catch) {
+      p.catch(() => {
+        ["touchstart", "click", "scroll", "keydown"].forEach((evt) => {
+          window.addEventListener(evt, start, { once: true, passive: true });
+        });
+      });
+    }
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) start(); });
+  }
+
+  /* Booking form */
+  const form = document.getElementById("bookForm");
+  const ready = document.getElementById("ready");
+  const waSend = document.getElementById("waSend");
+  const nameEl = document.getElementById("name");
+  const phoneEl = document.getElementById("whatsapp");
+  const dateEl = document.getElementById("date");
+
+  const pad = (n) => String(n).padStart(2, "0");
+  const now = new Date();
+  dateEl.min = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
+
+  phoneEl.addEventListener("input", () => {
+    const digits = phoneEl.value.replace(/\D/g, "");
+    phoneEl.setCustomValidity(digits.length >= 10 ? "" : "Enter a valid WhatsApp number, for example 0801 234 5678.");
+  });
+  nameEl.addEventListener("input", () => nameEl.setCustomValidity(""));
+
+  dateEl.addEventListener("change", () => {
+    if (!dateEl.value) { dateEl.setCustomValidity(""); return; }
+    const [y, m, d] = dateEl.value.split("-").map(Number);
+    const isSunday = new Date(y, m - 1, d).getDay() === 0;
+    dateEl.setCustomValidity(isSunday ? "We are closed on Sundays. Please pick Monday to Saturday." : "");
+  });
+
+  const handle = (v) => { v = v.trim().replace(/^@+/, ""); return v ? "@" + v : ""; };
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    phoneEl.dispatchEvent(new Event("input"));
+    if (!nameEl.value.trim()) nameEl.setCustomValidity("Please enter your full name.");
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    const data = new FormData(form);
+    const lines = ["Hello The Beauty Room, I would like to request an appointment.", ""];
+    lines.push("Name: " + data.get("name").trim());
+    lines.push("WhatsApp: " + data.get("whatsapp").trim());
+    const ig = handle(data.get("instagram")); if (ig) lines.push("Instagram: " + ig);
+    const tt = handle(data.get("tiktok")); if (tt) lines.push("TikTok: " + tt);
+    const em = data.get("email").trim(); if (em) lines.push("Email: " + em);
+    const st = data.get("style").trim(); if (st) lines.push("Style: " + st);
+    if (data.get("date")) {
+      const [y, m, d] = data.get("date").split("-").map(Number);
+      lines.push("Preferred date: " + new Date(y, m - 1, d).toLocaleDateString("en-NG", { weekday: "long", day: "numeric", month: "long" }));
+    }
+
+    waSend.href = waLink(lines.join("\n"));
+    form.hidden = true;
+    ready.hidden = false;
+    ready.focus();
+  });
+
+  document.getElementById("editReq").addEventListener("click", () => {
+    ready.hidden = true;
+    form.hidden = false;
+    nameEl.focus();
+  });
+</script>
+</body>
+</html>
